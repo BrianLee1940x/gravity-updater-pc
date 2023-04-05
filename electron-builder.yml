@@ -1,0 +1,4 @@
+appId: com.gravity.launcher-updater-pc
+publish:
+  provider: github
+  token: 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

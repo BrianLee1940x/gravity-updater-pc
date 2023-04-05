@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../assets/logo.png" type="image/icon type">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+    <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="./style/style.css"/>
+    <script>
+        window.$ = window.jQuery = require('./js/jquery-3.5.1.js');
+    </script>
+    <title>GRAVITY LAUNCHER</title>
+</head>
+
+<div id="preloader"></div>
+
+<body>
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+
+    <div id="notification" class="hidden">
+        <p id="message"></p>
+        <button id="close-button" onClick="closeNotification()">
+            Close
+        </button>
+        <button id="restart-button" onClick="restartApp()" class="hidden">
+            Restart
+        </button>
+    </div>   
+
+    <diw class="wrapper">
+        <div class="server_status"></div>
+        <input type="text" id="username" name="username" placeholder="ชื่อตัวละคร" value="Glenn_Rhee">
+        <div id="start">
+            <div class="start_btn">
+                <img src="../assets/launcher-btn-start.png" id="btn_start">
+            </div>
+        </div>
+        <div id="close">
+            <span>X</span>
+        </div>
+        <div id="resize">
+            <span>-</span>
+        </div>
+        <div id="settings">
+            <i class="fa fa-cog"></i>   
+        </div>
+        <div id="container_download">
+            <div id="percent_download">
+                <span>0%</span>
+            </div>
+            <div id="status_download">
+                <span>กรุณาอัพเดตเกมส์</span>
+            </div>
+            <div class="progressbar">
+                <progress id="progressbar" value="0" max="100" width="341" height="15"> 0% </progress>
+    
+            </div>
+        </div>
+        <div id="version">
+            <span>Copyright © 2023 | Ver. 0.0.1</span>
+        </div>
+    </diw>
+    <script src="./js/launcher.js"></script>
+</body>
+</html>
